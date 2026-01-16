@@ -9,3 +9,4 @@ npx expo start
 ## Documentation
 - [Architecture](./docs/ARCHITECTURE.md)
 - [API Documentation](./docs/API.md)
+- [About urql](./docs/ABOUT-URQL.md)

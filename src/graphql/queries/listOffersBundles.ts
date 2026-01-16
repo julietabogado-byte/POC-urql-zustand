@@ -78,7 +78,7 @@ query listOffersBundlesWithTotal(
       createdAt
       pricePerTh {
         __typename
-        btcPerTh(unit: "BTC")
+        btcPerTh(unit: BTC) 
         dollarPerTh
       }
       itemModel {
@@ -86,37 +86,37 @@ query listOffersBundlesWithTotal(
         id
         description
         efficiency
-        hashRate(unit: "TH_PS")
+        hashRate(unit: TH_PS)
         photoUrl
-        power(unit: "KW")
+        power(unit: KW)
       }
       pricePerTh {
         __typename
-        btcPerTh(unit: "BTC")
+        btcPerTh(unit: BTC)
         dollarPerTh
       }
       aggregationDetails {
         __typename
-        hashRateIdeal(unit: "TH_PS")
-        hashRate24Hr(unit: "TH_PS")
+        hashRateIdeal(unit: TH_PS)
+        hashRate24Hr(unit: TH_PS)
         price {
           __typename
-          priceBtc(unit: "BTC")
+          priceBtc(unit: BTC)
           priceUsd
         }
         estimatedMonthlyProfit {
           __typename
-          priceBtc(unit: "BTC")
+          priceBtc(unit: BTC)
           priceUsd
         }
         estimatedMonthlyRevenue {
           __typename
-          priceBtc(unit: "BTC")
+          priceBtc(unit: BTC)
           priceUsd
         }
-        hashRate24Hr(unit: "TH_PS")
-        powerUsage24Hr(unit: "KW")
-        powerManufacturer(unit: "KW")
+        hashRate24Hr(unit: TH_PS)
+        powerUsage24Hr(unit: KW)
+        powerManufacturer(unit: KW)
       }
       hostingSite {
         __typename

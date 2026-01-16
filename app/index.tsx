@@ -1,15 +1,20 @@
 import OfferCard from "@/src/components/OfferCard";
-import { LIST_OFFERS_BUNDLES_QUERY } from "@/src/graphql/queries/listOffersBundles";
+// Codegen generated hook 
+import { useListOffersBundlesWithTotalQuery } from "@/src/hooks/graphql";
 import { useMarketplaceStore } from "@/src/store/useMarketPlaceStore";
 import { Button, FlatList, StyleSheet, Text, View } from "react-native";
-import { useQuery } from "urql";
+// import { useQuery } from "urql";
 
 export default function Index() {
   const { sortOrder, sortField, setSorting, resetFilters } =
     useMarketplaceStore();
 
-  const [result] = useQuery({
-    query: LIST_OFFERS_BUNDLES_QUERY,
+  //Generated hook fully typed
+  //sends a GraphQL request to fetch 25 offer bundles, 
+  // sorted by your store's settings, with no active filters, 
+  // and stores the response in result.
+
+  const [result] = useListOffersBundlesWithTotalQuery({
     variables: {
       pagination: { first: 25, after: "0" },
       sorting: { order: sortOrder, field: sortField },
